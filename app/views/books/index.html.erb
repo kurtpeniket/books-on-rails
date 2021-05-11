@@ -2,7 +2,14 @@
     <div class='p-3 d-flex justify-content-around'>
         <% @books.each do |book| %>
         <div class='card' style='width: 18rem'>
-            <img class='card-img-top' src='https://edit.org/images/cat/book-covers-big-2019101610.jpg' alt='book cover'>
+
+          <%# Check if instance has a an isbn to use in image search  %>
+          <% if book.isbn != nil %>
+            <%= image_tag "http://covers.openlibrary.org/b/isbn/#{book.isbn}-L.jpg", alt: "alttext", class: "card-img-top"%>
+          <% else %>
+            <%= image_tag 'cover.jpg', class: "card-img-top" %>
+          <% end %>
+
             <div class='card-body'>
                 <h4><%= book.title %></h4>
                 <h4><%= book.author %></h4>
