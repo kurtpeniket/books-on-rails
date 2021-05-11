@@ -1,0 +1,17 @@
+<div class="container" >
+  <div class="row justify-content-center my-3">
+    <div class="col-6">
+      <h2>Add a new book</h2>
+      <%= simple_form_for @book do |f| %>
+      <div class="form" >
+        <%= f.input :title %>
+        <%= f.input :author %>
+        <%= f.input :rating %>
+      </div>
+      <div class="form-actions btn btn-primary">
+        <%= f.submit "Add book to library", class: "btn btn-primary" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
