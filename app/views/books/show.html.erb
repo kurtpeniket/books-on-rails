@@ -1,3 +1,24 @@
-<h1>Title: <%= @book.title %></h1>
-<h1>Author: <%= @book.author %></h1>
-<h1>Rating: <%= @book.rating %></h1>
+<div class='container p-3 d-flex justify-content-between'>
+    <div class='card' style='width: 40vh'>
+        <img class='card-img-top' src='https://edit.org/images/cat/book-covers-big-2019101610.jpg' alt='book cover'>
+        <div class='card-body'>
+            <h4><%= @book.title %></h4>
+            <h4><%= @book.author %></h4>
+            <p>Rating: <%= @book.rating %></p>
+            <%= link_to 'Back to my books', books_path, class: 'btn btn-dark' %>
+        </div>
+    </div>
+    <div class='card w-75 p-3'>
+        <h3 class='my-3'>My notes...</h3>
+        <hr>
+        <div class='my-3'>
+            <p>Book synopsis and notes here...</p>
+            <p>Book synopsis and notes here...</p>
+            <p>Book synopsis and notes here...</p>
+            <p>Book synopsis and notes here...</p>
+            <p>Book synopsis and notes here...</p>
+            <p>Book synopsis and notes here...</p>
+            <p>Book synopsis and notes here...</p>
+        </div>
+    </div>
+</div>

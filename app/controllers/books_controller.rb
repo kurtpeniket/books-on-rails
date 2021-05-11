@@ -21,12 +21,20 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    @books = Book.where("user_id = #{current_user.id}")
+  end
+
+
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    flash[:alert] = 'Deleted!'
+    redirect_to books_path
   end
 
   private
 
   def book_params
     params.require(:book).permit(:title, :author, :rating)
-  end
+  end    
 end

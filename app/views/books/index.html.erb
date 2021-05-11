@@ -1,7 +1,18 @@
-<div class='container'>
-    <% @books.each do |book| %>
-        <p><%= book.title %></p>
-        <p><%= book.author %></p>
-        <p><%= book.rating %></p>
-    <% end %>
-</div>
+<% if @books.length.positive? %>
+    <div class='p-3 d-flex justify-content-around'>
+        <% @books.each do |book| %>
+        <div class='card' style='width: 18rem'>
+            <img class='card-img-top' src='https://edit.org/images/cat/book-covers-big-2019101610.jpg' alt='book cover'>
+            <div class='card-body'>
+                <h4><%= book.title %></h4>
+                <h4><%= book.author %></h4>
+                <p>Rating: <%= book.rating %></p>
+                <%= link_to 'More details', book_path(book), class: 'btn btn-outline-secondary' %>
+                <%= link_to 'Delete', book_path(book), method: :delete, data: { confirm: "Confirm?" }, class: 'btn btn-outline-danger' %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+<% else %>
+    <h2>Sorry, you haven't saved any books yet!</h2>
+<% end %>
