@@ -21,6 +21,7 @@ class BooksController < ApplicationController
   end
 
   def index
+    # Filter to only show instances belonging to current user
     @books = Book.where("user_id = #{current_user.id}")
   end
 
