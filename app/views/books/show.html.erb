@@ -13,19 +13,14 @@
             <h4><%= @book.author %></h4>
             <p>Rating: <%= @book.rating %></p>
             <%= link_to 'Back to my books', books_path, class: 'btn btn-dark' %>
+            <%= link_to 'Edit', edit_book_path, class: 'btn btn-info' %>
         </div>
     </div>
     <div class='card w-75 p-3'>
         <h3 class='my-3'>My notes...</h3>
         <hr>
         <div class='my-3'>
-            <p>Book synopsis and notes here...</p>
-            <p>Book synopsis and notes here...</p>
-            <p>Book synopsis and notes here...</p>
-            <p>Book synopsis and notes here...</p>
-            <p>Book synopsis and notes here...</p>
-            <p>Book synopsis and notes here...</p>
-            <p>Book synopsis and notes here...</p>
+            <p><%= @book.note %></p>
         </div>
     </div>
 </div>
