@@ -14,7 +14,7 @@
                 <h4><%= book.title %></h4>
                 <h4><%= book.author %></h4>
                 <p>Rating: <%= book.rating %></p>
-                <%= link_to 'More details', book_path(book), class: 'btn btn-outline-secondary' %>
+                <%= link_to 'More details', book_path(book), class: 'btn btn-info' %>
                 <%= link_to 'Delete', book_path(book), method: :delete, data: { confirm: "Confirm?" }, class: 'btn btn-outline-danger' %>
             </div>
         </div>
