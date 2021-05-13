@@ -1,0 +1,27 @@
+.show {
+    display: flex;
+    padding: 40px;
+}
+
+.card-img-top {
+    height: 500px;
+    width: 350px;
+}
+
+#notes {
+    width: 75%;
+}
+
+@media (max-width: 500px) {
+    .show {
+        flex-direction: column;
+    }
+
+    .card-img-top {
+        width: 100%;
+    }
+
+    #notes {
+        width: 100%;
+    }
+}

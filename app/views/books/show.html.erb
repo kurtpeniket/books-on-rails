@@ -1,5 +1,5 @@
-<div class='container p-3 d-flex justify-content-between'>
-    <div class='card' style='width: 40vh'>
+<div class='show'>
+    <div class='card'>
 
         <%# Check if instance has a an isbn to use in image search  %>
           <% if @book.isbn != nil %>
@@ -16,7 +16,7 @@
             <%= link_to 'Edit', edit_book_path, class: 'btn btn-info' %>
         </div>
     </div>
-    <div class='card w-75 p-3'>
+    <div id='notes' class='card p-3'>
         <h3 class='my-3'>My notes...</h3>
         <hr>
         <div class='my-3'>
