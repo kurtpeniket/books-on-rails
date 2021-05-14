@@ -5,9 +5,9 @@
 
           <%# Check if instance has a an isbn to use in image search  %>
           <% if book.isbn != nil %>
-            <%= image_tag "http://covers.openlibrary.org/b/isbn/#{book.isbn}-L.jpg", alt: "alttext", class: "card-img-top"%>
+            <%= image_tag "http://covers.openlibrary.org/b/isbn/#{book.isbn}-L.jpg", alt: "book cover", class: "card-img-top"%>
           <% else %>
-            <%= image_tag 'cover.jpg', class: "card-img-top" %>
+            <%= image_tag 'cover.jpg', alt: "book cover", class: "card-img-top" %>
           <% end %>
 
             <div class='card-body'>
